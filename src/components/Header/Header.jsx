@@ -7,18 +7,20 @@ const Header = () => {
       <h1>
         <Link to={'/'}>10012</Link>
       </h1>
-      <nav>
+      <nav className={styles.menu}>
         <NavLink to={'/'}>BEST</NavLink>
         <NavLink to={'/'}>TOP</NavLink>
         <NavLink to={'/'}>OUTER</NavLink>
         <NavLink to={'/'}>BOTTOM</NavLink>
         <NavLink to={'/'}>SHOES</NavLink>
       </nav>
-      <nav>
+      <nav className={styles.func}>
         <NavLink to={'/'}>WISHLIST</NavLink>
+        <NavLink to={'/'}>LOGIN</NavLink>
         <NavLink to={'/'}>CART</NavLink>
         <NavLink to={'/'}>MYPAGE</NavLink>
       </nav>
+      <i className={`bi bi-list ${styles.ham}`}></i>
     </header>
   )
 }

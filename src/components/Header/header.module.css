@@ -11,3 +11,28 @@
   gap: 2rem;
   margin: 1rem 2rem;
 }
+
+.ham {
+  display: none;
+  z-index: 10;
+  color: white;
+  cursor: pointer;
+}
+.ham:hover {
+  color: gray;
+}
+
+@media (max-width: 900px) {
+  .func {
+    display: none;
+  }
+  .ham {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
