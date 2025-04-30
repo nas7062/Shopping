@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: w;
+  background-color: black;
+  padding: 1rem;
+}
+
+.navbar > h2 {
+  font-size: 1.8rem;
+  color: white;
+  margin: 1rem 1rem;
+}
+
+.inputWrap {
+  position: relative;
+}
+
+.navbar input {
+  width: calc(100% - 2rem);
+  margin: auto;
+  height: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.navbar input:focus {
+  outline: none;
+}
+
+.search {
+  position: absolute;
+  color: gray;
+  left: calc(99% - 3rem);
+  top: 3px;
+  z-index: 100;
+  cursor: pointer;
+}

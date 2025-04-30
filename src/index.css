@@ -13,13 +13,9 @@ li {
   list-style: none;
 }
 
+main,
+section,
 header {
-  max-width: 1200px;
-  width: calc(100% - 2rem);
-  margin: auto;
-}
-
-main {
   max-width: 1200px;
   width: calc(100% - 2rem);
   margin: auto;
