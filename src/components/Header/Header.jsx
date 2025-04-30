@@ -1,7 +1,13 @@
 import { Link, NavLink } from 'react-router-dom'
 import styles from './header.module.css'
+import { useState } from 'react'
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const ToggleOpen = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <header className={styles.header}>
       <h1>
@@ -20,7 +26,7 @@ const Header = () => {
         <NavLink to={'/'}>CART</NavLink>
         <NavLink to={'/'}>MYPAGE</NavLink>
       </nav>
-      <i className={`bi bi-list ${styles.ham}`}></i>
+      <i className={`bi bi-list ${styles.ham}`} onClick={ToggleOpen}></i>
     </header>
   )
 }
