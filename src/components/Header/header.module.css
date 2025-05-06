@@ -10,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
 }
 
 .header>* {
@@ -51,7 +50,7 @@
   }
 
   .content.open {
-    border: 1px solid blue;
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,15 +63,32 @@
   }
 
   .content.open .func,
-  .content.open .func {
-    display: block;
+  .content.open .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .content.open .func>*,
+  .content.open .menu>* {
+    border: 1px solid gray;
+    text-align: center;
+    width: 145%;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+
+  }
 
 }
 
 @media (max-width: 700px) {
   .menu {
     display: none;
+  }
+
+  .content.open {
+    width: calc(100% - 2rem);
+    height: 70%;
+    margin-top: 50%;
   }
 }

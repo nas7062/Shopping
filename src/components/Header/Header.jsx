@@ -1,13 +1,26 @@
 import { Link, NavLink } from 'react-router-dom'
 import styles from './header.module.css'
-import { useState } from 'react'
-
+import { useEffect, useState } from 'react'
+import { throttle } from '../../utils/features'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const ToggleOpen = () => {
     setIsOpen(!isOpen)
   }
+
+  const handleResize = throttle(() => {
+    if (window.innerWidth > 1100) {
+      setIsOpen(false)
+    }
+  }, 1000)
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [handleResize])
   return (
     <header className={styles.header}>
       <h1 className={styles.logo}>
