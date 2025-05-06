@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "watch:json-server": "json-server db.json --port 3000",
+    "watch:react": "react-scripts start",
+    "dev": "concurrently npm:watch:*",
     "build": "vite build",
     "lint": "eslint . --config eslint.config.js --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
@@ -34,5 +36,17 @@
     "globals": "^15.15.0",
     "prettier": "^3.5.3",
     "vite": "^6.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
