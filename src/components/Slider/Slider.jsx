@@ -1,16 +1,15 @@
 import css from './slider.module.css'
 import React, { useEffect, useState } from 'react'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper/modules'
 import axios from 'axios'
+import { SliderItem } from './SliderItem'
 export const Slider = () => {
   const [product, setProduct] = useState([])
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get('http://localhost:3000/products')
-        console.log(response)
         setProduct(response.data)
       } catch (error) {
         console.log(error)
@@ -18,7 +17,7 @@ export const Slider = () => {
     }
     fetchProduct()
   }, [])
-  console.log(product)
+
   return (
     <main className={css.slider}>
       <>
@@ -48,9 +47,9 @@ export const Slider = () => {
           modules={[Navigation]}
           className="mySwiper"
         >
-          {product.map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <img src={`/src/assets/slider${item}.jpg`} alt={`슬라이더 사진${item}`} />
+          {product.map(item => (
+            <SwiperSlide>
+              <SliderItem product={item} />
             </SwiperSlide>
           ))}
         </Swiper>

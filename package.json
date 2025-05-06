@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "watch:json-server": "json-server db.json --port 3000",
-    "watch:react": "react-scripts start",
-    "dev": "concurrently npm:watch:*",
+    "watch:react": "react-scripts start", 
+    "start": "concurrently \"npm run watch:json-server\" \"npm run watch:react\"",
+    "dev": "concurrently \"npm run watch:json-server\" \"vite\"",
     "build": "vite build",
     "lint": "eslint . --config eslint.config.js --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
