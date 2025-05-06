@@ -10,22 +10,24 @@ const Header = () => {
   }
   return (
     <header className={styles.header}>
-      <h1>
+      <h1 className={styles.logo}>
         <Link to={'/'}>10012</Link>
       </h1>
-      <nav className={styles.menu}>
-        <NavLink to={'/'}>BEST</NavLink>
-        <NavLink to={'/'}>TOP</NavLink>
-        <NavLink to={'/'}>OUTER</NavLink>
-        <NavLink to={'/'}>BOTTOM</NavLink>
-        <NavLink to={'/'}>SHOES</NavLink>
-      </nav>
-      <nav className={styles.func}>
-        <NavLink to={'/'}>WISHLIST</NavLink>
-        <NavLink to={'/'}>LOGIN</NavLink>
-        <NavLink to={'/'}>CART</NavLink>
-        <NavLink to={'/'}>MYPAGE</NavLink>
-      </nav>
+      <div className={isOpen ? `${styles.content} ${styles.open}` : styles.content}>
+        <nav className={styles.menu}>
+          <NavLink to={'/'}>BEST</NavLink>
+          <NavLink to={'/'}>TOP</NavLink>
+          <NavLink to={'/'}>OUTER</NavLink>
+          <NavLink to={'/'}>BOTTOM</NavLink>
+        </nav>
+        <nav className={styles.func}>
+          <NavLink to={'/'}>WISHLIST</NavLink>
+          <NavLink to={'/'}>LOGIN</NavLink>
+          <NavLink to={'/'}>CART</NavLink>
+          <NavLink to={'/'}>MYPAGE</NavLink>
+        </nav>
+      </div>
+
       <i className={`bi bi-list ${styles.ham}`} onClick={ToggleOpen}></i>
     </header>
   )

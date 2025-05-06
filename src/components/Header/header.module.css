@@ -6,7 +6,24 @@
   color: white;
 }
 
-.header > * {
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.header>* {
+  margin: 1rem 2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 2rem;
+}
+
+.func {
   display: flex;
   gap: 2rem;
   margin: 1rem 2rem;
@@ -14,10 +31,12 @@
 
 .ham {
   display: none;
-  z-index: 10;
+  z-index: 999;
   color: white;
   cursor: pointer;
+  position: relative;
 }
+
 .ham:hover {
   color: gray;
 }
@@ -26,9 +45,30 @@
   .func {
     display: none;
   }
+
   .ham {
     display: inline-block;
   }
+
+  .content.open {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: black;
+  }
+
+  .content.open .func,
+  .content.open .func {
+    display: block;
+  }
+
+
 }
 
 @media (max-width: 700px) {
