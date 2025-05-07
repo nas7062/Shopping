@@ -26,3 +26,32 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+.swiper {
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  color: black;
+  position: absolute;
+  top: 35%;
+  z-index: 9;
+  height: 80px;
+  cursor: pointer;
+}
+.swiper-button-next {
+  left: calc(96% - 2rem);
+}
+.swiper-button-prev:after {
+  content: '<';
+  font-size: 4rem !important;
+  font-weight: 600 !important;
+}
+.swiper-button-next:after {
+  content: '>';
+  font-size: 4rem !important;
+  font-weight: 600 !important;
+}

@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-.header>* {
+.header > * {
   margin: 1rem 2rem;
 }
 
@@ -60,6 +60,7 @@
     top: 0;
     right: 0;
     background-color: black;
+    z-index: 99;
   }
 
   .content.open .func,
@@ -69,16 +70,14 @@
     align-items: center;
   }
 
-  .content.open .func>*,
-  .content.open .menu>* {
+  .content.open .func > *,
+  .content.open .menu > * {
     border: 1px solid gray;
     text-align: center;
     width: 145%;
     padding: 0.5rem 2rem;
     border-radius: 1rem;
-
   }
-
 }
 
 @media (max-width: 700px) {

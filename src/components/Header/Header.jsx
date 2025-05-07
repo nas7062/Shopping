@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import styles from './header.module.css'
 import { useEffect, useState } from 'react'
-import { throttle } from '../../utils/features'
+import { throttle } from '../../utils/features.js'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
 
