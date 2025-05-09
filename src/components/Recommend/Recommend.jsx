@@ -1,8 +1,11 @@
 import styles from './recommend.module.css'
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
 import RecommendItem from './RecommendItem'
+
 const Recommend = () => {
   return (
     <main className={styles.recommend}>
@@ -29,7 +32,7 @@ const Recommend = () => {
             slidesPerGroup: 1,
           },
         }}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -39,4 +42,5 @@ const Recommend = () => {
     </main>
   )
 }
+
 export default Recommend

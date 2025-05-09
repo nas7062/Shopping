@@ -2,9 +2,9 @@ import styles from './recommenditem.module.css'
 
 const RecommendItem = () => {
   return (
-    <main className={styles.recommenditem}>
+    <div className={styles.recommenditem}>
       <p>RecommendItem</p>
-    </main>
+    </div>
   )
 }
 
