@@ -1,9 +1,10 @@
+import Recommend from '../components/Recommend/Recommend'
 import styles from './mainpage.module.css'
 
-const MainPage = () => {
+export const MainPage = () => {
   return (
     <main className={styles.mainpage}>
-      <p>MainPage</p>
+      <Recommend />
     </main>
   )
 }
