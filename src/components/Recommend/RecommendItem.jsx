@@ -3,7 +3,7 @@ import styles from './recommenditem.module.css'
 const RecommendItem = () => {
   return (
     <div className={styles.recommenditem}>
-      <p>RecommendItem</p>
+      <img src="/src/assets/bottom1.jpg" alt="" />
     </div>
   )
 }
